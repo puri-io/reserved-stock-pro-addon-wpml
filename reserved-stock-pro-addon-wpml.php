@@ -25,7 +25,7 @@ function puri_custom_rsp_wpml_find_default_language_product_id( $product_id ) {
 
 	$default_language_code = apply_filters( 'wpml_default_language', null );
 
-	if ( $default_language ) {
+	if ( $default_language_code ) {
 		$product_id = apply_filters( 'wpml_object_id', $product_id, 'product', true, $default_language_code );
 	}
 
