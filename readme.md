@@ -8,7 +8,7 @@ Each WPML translation is essentially "a new product" with it's own product ID. T
 
 ## How does it work? 
 
-This plugin uses the `reserved_stock_pro_handle_product_id` filter hook. The filter/function gives access to the current product ID which **Reserved Stock Pro** is about to handle, then tries to find the orginal product ID, using the WPML filter[wpml_object_id](https://wpml.org/wpml-hook/wpml_object_id/).
+This plugin uses the `reserved_stock_pro_handle_product_id` filter hook. The filter/function gives access to the current product ID which **Reserved Stock Pro** is about to handle, then tries to find the orginal product ID, using the WPML filter [wpml_object_id](https://wpml.org/wpml-hook/wpml_object_id/).
 
 If the product is a translation then product id of the original product will returned to **Reserved Stock Pro**.
 
