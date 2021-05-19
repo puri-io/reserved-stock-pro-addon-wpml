@@ -3,7 +3,7 @@
  * Plugin Name:       Reserved Stock Pro | Add-on - WPML
  * Plugin URI:        https://puri.io/plugin/reserve-stock-pro-for-woocommerce/
  * Description:       Example Add-on enables product reservations sync across all WPML languages. Tested with WPML 4.4.10
- * Version:           1.0.0
+ * Version:           1.0.1
  * Author:            Puri.io
  * Author URI:        https://puri.io/
  */
@@ -24,9 +24,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 function puri_custom_rsp_wpml_find_default_language_product_id( $product_id ) {
 
 	$default_language_code = apply_filters( 'wpml_default_language', null );
-	$current_language_code = apply_filters( 'wpml_current_language', null );
 
-	if ( $default_language_code !== $current_language_code ) {
+	if ( $default_language_code ) {
 		$product_id = apply_filters( 'wpml_object_id', $product_id, 'product', true, $default_language_code );
 	}
 
